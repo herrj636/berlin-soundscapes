@@ -25,49 +25,69 @@ button:hover {
 </head>
 
 <body>
-  <audio id="audioElement" src="audio/brgrs.mp3"></audio>
+  <audio id="audioElement" src="audio/UrbanIndustrial.mp3"></audio>
   <div>
     <button onclick="document.getElementById('audioElement').play()">Play &#9658;</button>
-    <button onclick="document.getElementById('audioElement').pause()">Pause ||</button>
+    <button id="stopButton">Pause All ||</button>
     <button onclick="document.getElementById('audioElement').volume+=0.5">Vol +</button>
     <button onclick="document.getElementById('audioElement').volume-=0.5">Vol -</button>
   </div>
 
 
-  <div id="UrbanIndustrial">  
-    <audio src="/audio/UrbanIndustrial1.mp3"></audio>
+  <div>  
+    <audio id="UrbanIndustrial" src="/audio/UrbanIndustrial.mp3"></audio>
+    <button onclick="document.getElementById('UrbanIndustrial').play()">Urban Industrial &#9658;</button>
   </div>
 
-  <div id="staticShockMusic">
-    <audio src="/audio/statiStore1.mp3"></audio>
+  <div>
+    <audio id="staticShockMusic" src="/audio/spatiStore.mp3"></audio>
+    <button onclick="document.getElementById('staticShockMusic').play()">Spati Store &#9658;</button>
   </div>
 
-  <div id="ammazzaChePizza">
-    <audio src="/audio/Pizza.mp3"></audio>
+  <div>
+    <audio id="Pizza" src="/audio/Pizza.mp3"></audio>
+    <button onclick="document.getElementById('Pizza').play()">Pizza &#9658;</button>
+
   </div>
 
-  <div id="turkishMarket">
-    <audio src="/audio/turkishFinalMix.mp3"></audio>
+  <div>
+    <audio id="turkishMarket" src="/audio/turkishMarket.mp3"></audio>
+    <button onclick="document.getElementById('turkishMarket').play()">Turkish Market &#9658;</button>
   </div>
 
-  <div id="Kraftwerk">
-    <audio src="/audio/kraftwerk.mp3"></audio>
+  <div>
+    <audio id="Kraftwerk" src="/audio/Kraftwerk.mp3"></audio>
+    <button onclick="document.getElementById('Kraftwerk').play()">Kraftwerk &#9658;</button>
   </div>
 
-  <div id="brgrs">
-    <audio src="/audio/brgrs.mp3"></audio>
+  <div>
+    <audio id="brgrs" src="/audio/brgrs.mp3"></audio>
+    <button onclick="document.getElementById('brgrs').play()">Brgrs &#9658;</button>
   </div>
 
   <div id="spatiRoom">
-    <audio src="/audio/spatiStore.mp3"></audio>
+    <audio id="spatiRoom" src="/audio/spatiRoom.mp3"></audio>
+    <button onclick="document.getElementById('spatiRoom').play()">Spati Room &#9658;</button>
   </div>
 
 
 <script src="https:///d3js.org/d3.v4.min.js"></script>
 <script>
+
+  document.getElementById('stopButton').onclick = function() {
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+};
+
+var loader = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++)
+
+
+
   
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   var audioElement = document.getElementById('audioElement');
+
   var audioSrc = audioCtx.createMediaElementSource(audioElement);
   var analyser = audioCtx.createAnalyser();
 
