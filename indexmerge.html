@@ -7,6 +7,8 @@
 <style>
 html, body, #svg {
   background-color: #130C0E;
+  margin: 0 auto; 
+  width: 100%;
 }
 button {
   font-size: 14px;
@@ -21,50 +23,193 @@ button:hover {
   background: #2c7bb6;
   color: #130C0E;
 }
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container .btn2 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container .btn3 {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+.container .btn4 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+.container .btn5 {
+  position: absolute;
+  top: 60%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container .btn6 {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container .btn7 {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+/*  transform: translate(-50%, -20%);
+  -ms-transform: translate(0%, -50%);*/
+  background-color: white;
+  color: #555;
+  font-size: 10px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+#map {
+
+  width: 50%;
+  padding-top: 50px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative; 
+
+
+}
+
+#location {
+
+  z-index: 3;
+  position:relative;
+  padding-bottom: 100px;
+  display: inline;
+}
+
+
 </style>
 </head>
 
 <body>
-  <audio id="audioElement" src="audio/brgrs.mp3"></audio>
-  <div>
-    <button onclick="document.getElementById('audioElement').play()">Play &#9658;</button>
-    <button onclick="document.getElementById('audioElement').pause()">Pause ||</button>
-    <button onclick="document.getElementById('audioElement').volume+=0.5">Vol +</button>
-    <button onclick="document.getElementById('audioElement').volume-=0.5">Vol -</button>
+  <div class="container">
+
+    <div id = "map">
+      <img src="mapCorrect-02.png">
+       <button class="btn">Urban Industrial</button>
+       <button class="btn2">Static Shock</button>
+       <button class="btn3">Ammazza che Pizza</button>
+       <button class="btn4">Turkish Market</button>
+       <button class="btn5">Kraftwerk Berlin</button>
+       <button class="btn6">BRGRS BRGRS</button>
+       <button class="btn7">Spati Room</button>
+
+
+    </div>
+
+    </div>
+
+  
+<!-- 
+  <div id="location1"> 
+
+    <img src="edit/location.png"> -->
+ 
   </div>
 
 
-  <div id="UrbanIndustrial">  
-    <audio src="/audio/UrbanIndustrial1.mp3"></audio>
-  </div>
-
-  <div id="staticShockMusic">
-    <audio src="/audio/statiStore1.mp3"></audio>
-  </div>
-
-  <div id="ammazzaChePizza">
-    <audio src="/audio/Pizza.mp3"></audio>
-  </div>
-
-  <div id="turkishMarket">
-    <audio src="/audio/turkishFinalMix.mp3"></audio>
-  </div>
-
-  <div id="Kraftwerk">
-    <audio src="/audio/kraftwerk.mp3"></audio>
-  </div>
-
-  <div id="brgrs">
-    <audio src="/audio/brgrs.mp3"></audio>
-  </div>
-
-  <div id="spatiRoom">
-    <audio src="/audio/spatiStore.mp3"></audio>
-  </div>
 
 
 <script src="https:///d3js.org/d3.v4.min.js"></script>
+
 <script>
+
+  var btn1 = document.getElementByClass("btn")
+
+    btn1.addEventListener("click"). = function() {
+
+    document.getElementById("imageTag").style.display="block";
+
+    return true;
+  }
+
+
+  </script>
+<!-- <script>
   
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   var audioElement = document.getElementById('audioElement');
@@ -119,6 +264,6 @@ button:hover {
   };
   
   drawChart();
-</script>
+</script> -->
 </body>
 </html>
