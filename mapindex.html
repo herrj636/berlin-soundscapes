@@ -161,8 +161,27 @@ button:hover {
   display: inline;
 }
 
+#urbanInd {
 
-</style>
+  z-index: 5;
+  padding-left: 550px;
+  top: -450px;
+  position: relative;
+  width: 20%;
+
+
+}
+
+#urbanInd3 {
+
+  z-index: 5;
+  padding-left: 800px;
+  width: 20%;
+
+
+}
+
+</style> 
 </head>
 
 <body>
@@ -170,16 +189,23 @@ button:hover {
 
     <div id = "map">
       <img src="mapCorrect-02.png">
-       <button class="btn">Urban Industrial</button>
+       <button class="btn" onclick="myFunction()">Urban Industrial</button>
        <button class="btn2">Static Shock</button>
        <button class="btn3">Ammazza che Pizza</button>
        <button class="btn4">Turkish Market</button>
        <button class="btn5">Kraftwerk Berlin</button>
        <button class="btn6">BRGRS BRGRS</button>
        <button class="btn7">Spati Room</button>
-
-
     </div>
+
+
+    <!--   <div id="urbanInd2"> 
+      <img src="./images/urban1.jpg">
+    </div> -->
+
+  <!--     <div id="urbanInd3"> 
+      <img src="./images/urban2.jpg">
+    </div> -->
 
     </div>
 
@@ -198,14 +224,12 @@ button:hover {
 
 <script>
 
-  var btn1 = document.getElementByClass("btn")
+ 
 
-    btn1.addEventListener("click"). = function() {
 
-    document.getElementById("imageTag").style.display="block";
+ 
 
-    return true;
-  }
+   
 
 
   </script>
