@@ -3,188 +3,21 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>D3 v4 - Music viz</title>
-<style>
-html, body, #svg {
-  background-color: #130C0E;
-  margin: 0 auto; 
-  width: 100%;
-}
-button {
-  font-size: 14px;
-  background: #130C0E;
-  color: #2c7bb6;
-  border: none;
-  outline:none;
-  padding: 4px 8px;
-  letter-spacing: 1px;
-}
-button:hover {
-  background: #2c7bb6;
-  color: #130C0E;
-}
-
-.container {
-  position: relative;
-  width: 100%;
-}
-
-.container img {
-  width: 100%;
-  height: auto;
-}
-
-.container .btn {
-  position: absolute;
-  top: 20%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.container .btn2 {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.container .btn3 {
-  position: absolute;
-  top: 40%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-
-.container .btn4 {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-
-.container .btn5 {
-  position: absolute;
-  top: 60%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.container .btn6 {
-  position: absolute;
-  top: 70%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.container .btn7 {
-  position: absolute;
-  top: 80%;
-  left: 5%;
-/*  transform: translate(-50%, -20%);
-  -ms-transform: translate(0%, -50%);*/
-  background-color: white;
-  color: #555;
-  font-size: 10px;
-  padding: 10px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-
-#map {
-
-  width: 50%;
-  padding-top: 50px;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative; 
-
-
-}
-
-#location {
-
-  z-index: 3;
-  position:relative;
-  padding-bottom: 100px;
-  display: inline;
-}
-
-#urbanInd {
-
-  z-index: 5;
-  padding-left: 550px;
-  top: -450px;
-  position: relative;
-  width: 20%;
-
-
-}
-
-#urbanInd3 {
-
-  z-index: 5;
-  padding-left: 800px;
-  width: 20%;
-
-
-}
-
-</style> 
+<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
+ <div id="main"><p>Sound waves as a future language. 
+
+In the future will we even communicate with the spoken work? What about something which transcends language? Which brings us to this question — what speaks to us more than music? Music can speak volumes to us an emotional level in some situations where mere words would pale in comparison. It is pure emotion communicated through notes, chords and melodies. We set out to see what Berlin could tell us on this level. As we traveled through the city, we created artifacts of the communication and experiences we had in each time and place. All which happened through spontaneous chance and luck. These experiential artifacts have been digitized in order to share it with the wider public. We invite you to join us on a sound journey and let the city of Berlin speak with you. 
+
+Contributors:
+Jae Pearl 
+Juan Herrera
+Ashley Morgan
+Yucheng Mou
+Yujie Jiang
+</p></div>
   <div class="container">
 
     <div id = "map">
@@ -199,44 +32,111 @@ button:hover {
     </div>
 
 
-    <!--   <div id="urbanInd2"> 
-      <img src="./images/urban1.jpg">
-    </div> -->
 
-  <!--     <div id="urbanInd3"> 
-      <img src="./images/urban2.jpg">
-    </div> -->
+<div id="separate" style="padding: 80px, 0, 80px, 0"><p style="color: #2c7bb6">>>> KEEP SCROLLING DOWN <<<</p></div>
 
-    </div>
 
-  
-<!-- 
-  <div id="location1"> 
 
-    <img src="edit/location.png"> -->
- 
+<audio id="audioElement" src="audio/UrbanIndustrial.mp3"></audio>
+  <div>
+    <button class="aubtn" id="stopButton" onClick="window.location.reload()">Pause All ||</button>
+    <button class="aubtn" onclick="document.getElementById('audioElement').volume+=0.5">Vol +</button>
+    <button class="aubtn" onclick="document.getElementById('audioElement').volume-=0.5">Vol -</button>
   </div>
 
 
+  <div>  
+    <audio id="UrbanIndustrial" src="/audio/UrbanIndustrial.mp3"></audio>
+    <button onclick="document.getElementById('UrbanIndustrial').play()">Urban Industrial &#9658;</button>
+  </div>
+
+  <div>
+    <audio id="staticShockMusic" src="/audio/spatiStore.mp3"></audio>
+    <button onclick="document.getElementById('staticShockMusic').play()">Spati Store &#9658;</button>
+  </div>
+
+  <div>
+    <audio id="Pizza" src="/audio/Pizza.mp3"></audio>
+    <button onclick="document.getElementById('Pizza').play()">Pizza &#9658;</button>
+
+  </div>
+
+  <div>
+    <audio id="turkishMarket" src="/audio/turkishFinalMix.mp3"></audio>
+    <button id="TM" onclick="document.getElementById('turkishMarket').play()">Turkish Market &#9658;</button>
+  </div>
+
+  <div>
+    <audio id="Kraftwerk" src="/audio/Kraftwerk.mp3"></audio>
+    <button id="KW" onclick="document.getElementById('Kraftwerk').play()">Kraftwerk &#9658;</button>
+  </div>
+
+  <div>
+    <audio id="brgrs" src="/audio/brgrs.mp3"></audio>
+    <button id="BR" onclick="document.getElementById('brgrs').play()">Brgrs &#9658;</button>
+  </div>
+
+  <div>
+    <audio id="spatiRoom" src="/audio/spatiStore.mp3"></audio>
+    <button id="SR" onclick="document.getElementById('spatiRoom').play()">Spati Room &#9658;</button>
+  </div>
 
 
 <script src="https:///d3js.org/d3.v4.min.js"></script>
-
 <script>
 
- 
+
+  document.getElementById('stopButton').onclick = function() {
+  var sounds = document.getElementsByTagName('audio');
+  for(i=0; i<sounds.length; i++) sounds[i].pause();
+  window.location.reload()
+};
+
+var audioID = ""
+
+document.getElementById("UrbanIndustrial").addEventListener("playing", UI);
+document.getElementById("staticShockMusic").addEventListener("playing", SM);
+document.getElementById("Pizza").addEventListener("playing", PZ);
+document.getElementById("turkishMarket").addEventListener("playing", TM);
+document.getElementById("Kraftwerk").addEventListener("playing", KW);
+document.getElementById("brgrs").addEventListener("playing", BR);
+document.getElementById("spatiRoom").addEventListener("playing", SR);
 
 
- 
 
-   
+function UI(){
+  run('UrbanIndustrial')
+}
 
+function SM(){
+  run('staticShockMusic')
+}
 
-  </script>
-<!-- <script>
+function PZ(){
+  run('Pizza')
+}
+
+function TM(){
+  run('turkishMarket')
+}
+
+function KW(){
+  run('Kraftwerk')
+}
+
+function BR(){
+  run('brgrs')
+}
+
+function SR(){
+  run('spatiRoom')
+}
+
+function run (audioID) {
   
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  var audioElement = document.getElementById('audioElement');
+  var audioElement = document.getElementById(audioID);
+
   var audioSrc = audioCtx.createMediaElementSource(audioElement);
   var analyser = audioCtx.createAnalyser();
 
@@ -288,6 +188,8 @@ button:hover {
   };
   
   drawChart();
-</script> -->
+};
+</script>
 </body>
+
 </html>
